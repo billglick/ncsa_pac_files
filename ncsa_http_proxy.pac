@@ -129,6 +129,11 @@ function FindProxyForURL(url, host) {
                 "netmask": "255.255.255.255"
         },
         {
+                "name": "ncsa netdot-proxy ipam",
+                "start": "141.142.141.131",
+                "netmask": "255.255.255.255"
+        },
+        {
                 "name": "lsst-nts-k8s.ncsa.illinois.edu",
                 "start": "141.142.238.233",
                 "netmask": "255.255.255.255"
