@@ -153,6 +153,11 @@ function FindProxyForURL(url, host) {
                 "start": "141.142.161.134",
                 "netmask": "255.255.255.255"
         },
+        {       
+                "name": "magnus rstudio connect",
+                "start": "141.142.161.135",
+                "netmask": "255.255.255.255"
+        },
         {
                 "name": "ncsa httpproxy",
                 "start": "141.142.192.39",
