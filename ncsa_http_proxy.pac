@@ -184,6 +184,11 @@ function FindProxyForURL(url, host) {
                 "netmask": "255.255.255.255"
         },
         {
+                "name": "ncsa edream-test",
+                "start": "141.142.193.98",
+                "netmask": "255.255.255.255"
+        },
+        {
                 "name": "ncsa rockosocko",
                 "start": "141.142.192.206",
                 "netmask": "255.255.255.255"
