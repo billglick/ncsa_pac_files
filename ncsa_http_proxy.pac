@@ -159,6 +159,16 @@ function FindProxyForURL(url, host) {
                 "netmask": "255.255.255.255"
         },
         {
+                "name": "magnus rstudio server test",
+                "start": "141.142.161.136",
+                "netmask": "255.255.255.255"
+        },
+        {
+                "name": "magnus rstudio connect test",
+                "start": "141.142.161.137",
+                "netmask": "255.255.255.255"
+        },
+        {
                 "name": "ncsa httpproxy",
                 "start": "141.142.192.39",
                 "netmask": "255.255.255.255"
