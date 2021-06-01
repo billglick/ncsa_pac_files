@@ -8,7 +8,7 @@ function FindProxyForURL(url, host) {
 //    ssh -D 8084 140.252.32.143   ## LSST TUCSON BASTION
 //    ssh -D 8085 lsst-adm01.ncsa.illinois.edu    ## LSST NPCF xCAT
 //    ssh -D 8086 lsst-adm-ncsa.ncsa.illinois.edu ## LSST NCSA xCAT
-
+//    ssh -D 8087 acer.ncsa.illinois.edu ## VSPHERE ISCSI SUBNET ACCESS
 
     // LSST-LOGIN
 //    var  lsst_proxy = "SOCKS 127.0.0.1:8083";
@@ -323,7 +323,34 @@ function FindProxyForURL(url, host) {
 		return ache_bastion_proxy;
     }
 
+ // Acer
+    var acer_bastion_proxy = "SOCKS 127.0.0.1:8087";
 
+    var acer_bastion_subnets = [
+        {
+                "name": "EqualLogic dharmastation group - arrow & swan",
+                "start": "192.168.152.2",
+                "netmask": "255.255.255.254"
+        },
+        {       
+                "name": "EqualLogic dharma-npcf group - pearl",
+                "start": "192.168.152.4",
+                "netmask": "255.255.255.254"
+        },
+        {
+                "name": "Synology datastore",
+                "start": "192.168.152.241",
+                "netmask": "255.255.255.254"
+        },
+    ];
+
+    for (var i = 0; i < acer_bastion_subnets.length; i++)
+    {
+        if ( isInNet(host, acer_bastion_subnets[i].start, ache_bastion_subnets[i].netmask) )
+                return acer_bastion_proxy;
+    }
+
+ 
     // No match
     
     return "DIRECT";
