@@ -199,6 +199,11 @@ function FindProxyForURL(url, host) {
                 "netmask": "255.255.255.255"
         },
         {
+                "name": "ncsa campuscluster-test",
+                "start": "141.142.192.168",
+                "netmask": "255.255.255.255"
+        },
+        {
                 "name": "ncsa edream-test",
                 "start": "141.142.193.98",
                 "netmask": "255.255.255.255"
