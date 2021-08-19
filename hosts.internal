@@ -62,3 +62,11 @@
 172.28.2.5 ache-esx02m.internal.ncsa.edu
 172.28.2.8 mesx01m.internal.ncsa.edu
 172.28.2.9 mesx02m.internal.ncsa.edu
+172.28.18.7 asd-log.internal.ncsa.edu
+172.28.18.8 asd-pup.internal.ncsa.edu
+172.28.18.18 asd-prov01.internal.ncsa.edu
+172.28.20.3 asd-test-rhel8b.internal.ncsa.edu
+172.28.20.4 asd-test-rhel8a.internal.ncsa.edu
+172.28.20.5 asd-test-centos7a.internal.ncsa.edu
+172.28.20.6 asd-test-afs01.internal.ncsa.edu
+172.28.20.7 asd-test-afsdb1.internal.ncsa.edu

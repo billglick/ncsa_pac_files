@@ -108,20 +108,25 @@ function FindProxyForURL(url, host) {
                 "start": "172.24.16.1",
                 "netmask": "255.255.255.0"
         },
+        {       
+                "name": "Admin Delta VM Network 550",
+                "start": "172.28.16.65",
+                "netmask": "255.255.255.254"
+        },
+        {       
+                "name": "ASD Provisioning Network 916",
+                "start": "172.28.18.0",
+                "netmask": "255.255.255.0"
+        },
+        {
+                "name": "ASD VM Private Network 917",
+                "start": "172.28.20.0",
+                "netmask": "255.255.254.0"
+        },
         {
                 "name": "lsst laserena aa net",
                 "start": "139.229.126.1",
                 "netmask": "255.255.255.0"
-        },
-        {
-                "name": "lsst cerro pachon aa ipmi net",
-                "start": "172.28.5.1",
-                "netmask": "255.255.255.224"
-        },
-        {
-                "name": "lsst cerro pachon aa esx net",
-                "start": "172.28.5.33",
-                "netmask": "255.255.255.224"
         },
         {
                 "name": "ncsa netdot",
