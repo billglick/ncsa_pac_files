@@ -199,6 +199,11 @@ function FindProxyForURL(url, host) {
                 "netmask": "255.255.255.255"
         },
         {
+                "name": "ncsa internal-dev",
+                "start": "141.142.193.200",
+                "netmask": "255.255.255.255"
+        },
+        {
                 "name": "ncsa avl-test",
                 "start": "141.142.192.134",
                 "netmask": "255.255.255.255"
