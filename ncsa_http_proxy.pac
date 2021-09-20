@@ -239,6 +239,11 @@ function FindProxyForURL(url, host) {
                 "netmask": "255.255.255.255"
         },
         {
+                "name": "ncsa repo",
+                "start": "141.142.192.125",
+                "netmask": "255.255.255.255"
+        },
+        {
                 "name": "ncsa identity",
                 "start": "141.142.193.68",
                 "netmask": "255.255.255.255"
