@@ -244,6 +244,11 @@ function FindProxyForURL(url, host) {
                 "netmask": "255.255.255.255"
         },
         {
+                "name": "repo.security mirrors.security",
+                "start": "141.142.171.11",
+                "netmask": "255.255.255.255"
+        },
+        {
                 "name": "ncsa identity",
                 "start": "141.142.193.68",
                 "netmask": "255.255.255.255"
