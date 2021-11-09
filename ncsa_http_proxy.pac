@@ -178,6 +178,7 @@ function FindProxyForURL(url, host) {
                 "start": "141.142.192.39",
                 "netmask": "255.255.255.255"
         },
+        {
                 "name": "ncsa bluewaters-test",
                 "start": "141.142.192.158",
                 "netmask": "255.255.255.255"
