@@ -298,6 +298,11 @@ function FindProxyForURL(url, host) {
                 "start": "141.142.192.195",
                 "netmask": "255.255.255.255"
         },
+        {
+                "name": "campusmon2v2.techservices.illinois.edu nagiosxi",
+                "start": "192.17.18.71",
+                "netmask": "255.255.255.255"
+        },
     ];
 
     for (var i = 0; i < cerberus_bastion_subnets.length; i++)
