@@ -299,6 +299,11 @@ function FindProxyForURL(url, host) {
                 "netmask": "255.255.255.255"
         },
         {
+                "name": "www.ncsa.illinois.edu TechServices cPanel",
+                "start": "18.220.149.166",
+                "netmask": "255.255.255.255"
+        },
+        {
                 "name": "campusmon2v2.techservices.illinois.edu nagiosxi",
                 "start": "192.17.18.71",
                 "netmask": "255.255.255.255"
