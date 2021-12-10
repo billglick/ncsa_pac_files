@@ -274,6 +274,11 @@ function FindProxyForURL(url, host) {
                 "netmask": "255.255.255.255"
         },
         {
+                "name": "basin.ncsa.illinois.edu",
+                "start": "141.142.193.190",
+                "netmask": "255.255.255.255"
+        },
+        {
                 "name": "ncsa mysql",
                 "start": "141.142.192.249",
                 "netmask": "255.255.255.255"
