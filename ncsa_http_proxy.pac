@@ -180,42 +180,42 @@ function FindProxyForURL(url, host) {
         },
         {
                 "name": "ncsa cotton",
-                "start": "141.142.193.11",
+                "start": "141.142.193.114",
                 "netmask": "255.255.255.255"
         },
         {
                 "name": "ncsa crashplan",
-                "start": "141.142.192.20",
+                "start": "141.142.192.209",
                 "netmask": "255.255.255.255"
         },
         {
                 "name": "ncsa mylar",
-                "start": "141.142.193.",
+                "start": "141.142.193.1",
                 "netmask": "255.255.255.255"
         },
         {
                 "name": "ncsa paper",
-                "start": "141.142.192.13",
+                "start": "141.142.192.135",
                 "netmask": "255.255.255.255"
         },
         {
                 "name": "ncsa papyrus",
-                "start": "141.142.193.8",
+                "start": "141.142.193.88",
                 "netmask": "255.255.255.255"
         },
         {
                 "name": "ncsa parchment",
-                "start": "141.142.192.5",
+                "start": "141.142.192.59",
                 "netmask": "255.255.255.255"
         },
         {
                 "name": "ncsa tyvek",
-                "start": "141.142.192.23",
+                "start": "141.142.192.232",
                 "netmask": "255.255.255.255"
         },
         {
                 "name": "ncsa vellum",
-                "start": "141.142.192.18",
+                "start": "141.142.192.189"
                 "netmask": "255.255.255.255"
         },
         {
