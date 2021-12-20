@@ -215,7 +215,7 @@ function FindProxyForURL(url, host) {
         },
         {
                 "name": "ncsa vellum",
-                "start": "141.142.192.189"
+                "start": "141.142.192.189",
                 "netmask": "255.255.255.255"
         },
         {
