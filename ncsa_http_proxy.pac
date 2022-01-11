@@ -94,6 +94,11 @@ function FindProxyForURL(url, host) {
 		"netmask": "255.255.255.0"
 	},
         {
+                "name": "delta vsphere mgmt net esxi",
+                "start": "172.28.39..1",
+                "netmask": "255.255.255.0"
+        },
+        {
                 "name": "nebula iDRAC",
                 "start": "10.142.208.1",
                 "netmask": "255.255.255.0"

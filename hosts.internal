@@ -81,3 +81,5 @@
 172.28.20.7 asd-test-afsdb1.internal.ncsa.edu
 172.28.20.8 asd-test-rocky8a.internal.ncsa.edu
 172.28.20.9 asd-test-afs02.internal.ncsa.edu
+172.28.39.11 dt-esxi1.delta.internal.ncsa.edu
+172.28.39.12 dt-esxi2.delta.internal.ncsa.edu
