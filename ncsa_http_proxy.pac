@@ -95,7 +95,7 @@ function FindProxyForURL(url, host) {
 	},
         {
                 "name": "delta vsphere mgmt net esxi",
-                "start": "172.28.39..1",
+                "start": "172.28.39.1",
                 "netmask": "255.255.255.0"
         },
         {
