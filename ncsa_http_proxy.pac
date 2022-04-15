@@ -474,7 +474,7 @@ function FindProxyForURL(url, host) {
 
     for (var i = 0; i < holli_bastion_subnets.length; i++)
     {
-        if ( isInNet(host, holli_bastion_subnets[i].start, acer_bastion_subnets[i].netmask) )
+        if ( isInNet(host, holli_bastion_subnets[i].start, holli_bastion_subnets[i].netmask) )
                 return holli_bastion_proxy;
     }
 
