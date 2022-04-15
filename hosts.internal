@@ -90,3 +90,11 @@
 172.28.20.15 ici-tintri-tgc.internal.ncsa.edu
 172.28.39.11 dt-esxi1.delta.internal.ncsa.edu
 172.28.39.12 dt-esxi2.delta.internal.ncsa.edu
+172.28.40.4 hli-login01-bmc.holli.internal.ncsa.edu
+172.28.40.5 hli-sched-bmc.holli.internal.ncsa.edu
+172.28.40.6 hli-lnet01-bmc.holli.internal.ncsa.edu
+172.28.40.7 hli-lnet01-bmc.holli.internal.ncsa.edu
+172.28.40.68 hli-login01-mgmt.holli.internal.ncsa.edu
+172.28.40.69 hli-sched-mgmt.holli.internal.ncsa.edu
+172.28.40.70 hli-lnet01-mgmt.holli.internal.ncsa.edu
+172.28.40.71 hli-lnet01-mgmt.holli.internal.ncsa.edu

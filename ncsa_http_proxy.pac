@@ -9,6 +9,7 @@ function FindProxyForURL(url, host) {
 //    ssh -D 8085 lsst-adm01.ncsa.illinois.edu    ## LSST NPCF xCAT
 //    ssh -D 8086 lsst-adm-ncsa.ncsa.illinois.edu ## LSST NCSA xCAT
 //    ssh -D 8087 acer.ncsa.illinois.edu ## VSPHERE ISCSI SUBNET ACCESS
+//    ssh -D 8088 hli-adm01.internal.ncsa.edu  ## HOLLI INTERNAL SUBNETS ACCESS
 
     // LSST-LOGIN
 //    var  lsst_proxy = "SOCKS 127.0.0.1:8083";
@@ -451,8 +452,30 @@ function FindProxyForURL(url, host) {
 
     for (var i = 0; i < acer_bastion_subnets.length; i++)
     {
-        if ( isInNet(host, acer_bastion_subnets[i].start, ache_bastion_subnets[i].netmask) )
+        if ( isInNet(host, acer_bastion_subnets[i].start, acer_bastion_subnets[i].netmask) )
                 return acer_bastion_proxy;
+    }
+
+ // HOLLI
+    var holli_bastion_proxy = "SOCKS 127.0.0.1:8088";
+
+    var holli_bastion_subnets = [
+        {
+                "name": "HOLLI BMC SUBNET",
+                "start": "172.28.40.1",
+                "netmask": "255.255.255.192"
+        },
+        {
+                "name": "HOLLI MGMT SUBNET",
+                "start": "172.28.40.65",
+                "netmask": "255.255.255.192"
+        },
+    ];
+
+    for (var i = 0; i < holli_bastion_subnets.length; i++)
+    {
+        if ( isInNet(host, holli_bastion_subnets[i].start, acer_bastion_subnets[i].netmask) )
+                return holli_bastion_proxy;
     }
 
  
