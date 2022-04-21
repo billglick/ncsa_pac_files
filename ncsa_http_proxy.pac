@@ -439,52 +439,52 @@ function FindProxyForURL(url, host) {
 
 
     // Acer
-//    var acer_bastion_proxy = "SOCKS 127.0.0.1:8087";
-//
-//    var acer_bastion_subnets = [
-//        {
-//            "name": "EqualLogic dharmastation group - arrow and swan",
-//            "start": "192.168.152.2",
-//            "netmask": "255.255.255.254"
-//        },
-//        {       
-//            "name": "EqualLogic dharma-npcf group - pearl",
-//            "start": "192.168.152.4",
-//            "netmask": "255.255.255.254"
-//        },
-//        {
-//            "name": "Synology datastore",
-//            "start": "192.168.152.241",
-//            "netmask": "255.255.255.254"
-//        },
-//    ];
-//    for (var i = 0; i < acer_bastion_subnets.length; i++)
-//    {
-//        if ( isInNet(host, acer_bastion_subnets[i].start, acer_bastion_subnets[i].netmask) )
-//            return acer_bastion_proxy;
-//    }
+    var acer_bastion_proxy = "SOCKS 127.0.0.1:8087";
+
+    var acer_bastion_subnets = [
+        {
+            "name": "EqualLogic dharmastation group - arrow and swan",
+            "start": "192.168.152.2",
+            "netmask": "255.255.255.254"
+        },
+        {       
+            "name": "EqualLogic dharma-npcf group - pearl",
+            "start": "192.168.152.4",
+            "netmask": "255.255.255.254"
+        },
+        {
+            "name": "Synology datastore",
+            "start": "192.168.152.241",
+            "netmask": "255.255.255.254"
+        },
+    ];
+    for (var i = 0; i < acer_bastion_subnets.length; i++)
+    {
+        if ( isInNet(host, acer_bastion_subnets[i].start, acer_bastion_subnets[i].netmask) )
+            return acer_bastion_proxy;
+    }
 
 
     // Holl-I
-//    var holli_bastion_proxy = "SOCKS 127.0.0.1:8088";
-//
-//    var holli_bastion_subnets = [
-//        {
-//            "name": "HOLLI BMC SUBNET",
-//            "start": "172.28.40.1",
-//            "netmask": "255.255.255.192"
-//        },
-//        {
-//            "name": "HOLLI MGMT SUBNET",
-//            "start": "172.28.40.65",
-//            "netmask": "255.255.255.192"
-//        },
-//    ];
-//    for (var i = 0; i < holli_bastion_subnets.length; i++)
-//    {
-//        if ( isInNet(host, holli_bastion_subnets[i].start, holli_bastion_subnets[i].netmask) )
-//            return holli_bastion_proxy;
-//    }
+    var holli_bastion_proxy = "SOCKS 127.0.0.1:8088";
+
+    var holli_bastion_subnets = [
+        {
+            "name": "HOLLI BMC SUBNET",
+            "start": "172.28.40.1",
+            "netmask": "255.255.255.192"
+        },
+        {
+            "name": "HOLLI MGMT SUBNET",
+            "start": "172.28.40.65",
+            "netmask": "255.255.255.192"
+        },
+    ];
+    for (var i = 0; i < holli_bastion_subnets.length; i++)
+    {
+        if ( isInNet(host, holli_bastion_subnets[i].start, holli_bastion_subnets[i].netmask) )
+            return holli_bastion_proxy;
+    }
 
 
     // No match
