@@ -250,6 +250,21 @@ function FindProxyForURL(url, host) {
             "netmask": "255.255.255.255"
         },
         {
+            "name": "cmdb-test.ncsa.illinois.edu",
+            "start": "141.142.192.147",
+            "netmask": "255.255.255.255"
+        },
+        {
+            "name": "cmdb-dev-alinab.ncsa.illinois.edu",
+            "start": "141.142.193.11",
+            "netmask": "255.255.255.255"
+        },
+        {
+            "name": "cmdb-dev-kimber7.ncsa.illinois.edu",
+            "start": "141.142.193.12",
+            "netmask": "255.255.255.255"
+        },
+        {
             "name": "basin.ncsa.illinois.edu",
             "start": "141.142.193.190",
             "netmask": "255.255.255.255"
