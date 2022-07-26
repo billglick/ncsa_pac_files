@@ -411,6 +411,11 @@ function FindProxyForURL(url, host) {
     var lsst_adm01_bastion_subnets = [
         {
             "name": "lsst npcf xCAT-SVC ipmi",
+            "start": "10.142.180.1",
+            "netmask": "255.255.252.0"
+        },
+        {
+            "name": "lsst npcf xCAT-SVC OLD ipmi",
             "start": "192.168.180.1",
             "netmask": "255.255.252.0"
         },
