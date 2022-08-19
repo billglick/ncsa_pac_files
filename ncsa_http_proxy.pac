@@ -332,10 +332,26 @@ function FindProxyForURL(url, host) {
             "netmask": "255.255.255.192"
         },
         {
-            "name": "mforge-ipmi",
+            "name": "mforge-vmware-ipmi",
             "start": "172.28.2.0",
             "netmask": "255.255.255.192"
         },
+        {
+            "name": "mforge-private-ipmi",
+            "start": "172.28.14.0",
+            "netmask": "255.255.254.0"
+        },
+        {
+            "name": "mforge-access-net",
+            "start": "172.28.2.128",
+            "netmask": "255.255.255.192"
+        },
+        # NOT ACCESSIBLE FROM ache-bastion ??
+        #{
+        #    "name": "mforge-private-mgmt",
+        #    "start": "10.1.0.0",
+        #    "netmask": "255.255.0.0"
+        #},
         {
             "name": "ache-ipmi",
             "start": "172.28.2.64",
