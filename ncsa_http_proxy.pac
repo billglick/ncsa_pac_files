@@ -346,12 +346,12 @@ function FindProxyForURL(url, host) {
             "start": "172.28.2.128",
             "netmask": "255.255.255.192"
         },
-        # NOT ACCESSIBLE FROM ache-bastion ??
-        #{
-        #    "name": "mforge-private-mgmt",
-        #    "start": "10.1.0.0",
-        #    "netmask": "255.255.0.0"
-        #},
+        // NOT ACCESSIBLE FROM ache-bastion ??
+        // {
+        //     "name": "mforge-private-mgmt",
+        //     "start": "10.1.0.0",
+        //     "netmask": "255.255.0.0"
+        // },
         {
             "name": "ache-ipmi",
             "start": "172.28.2.64",
