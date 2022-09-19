@@ -40,6 +40,10 @@
 10.142.237.204 lsst-esx4.internal.ncsa.edu
 10.142.237.205 lsst-esx5.internal.ncsa.edu
 10.142.237.206 lsst-esx6.internal.ncsa.edu
+10.156.1.15 mforgeweb1.mayo.edu mforgeweb.mayo.edu
+10.156.1.17 mforgeweb3.mayo.edu mforgewebint.mayo.edu
+10.156.1.40 mforgeweb4.mayo.edu mforgewebdev.mayo.edu
+10.156.1.47 mforgeweb5.mayo.edu mforgewebncsa.mayo.edu
 172.24.16.8 lsst-esx07.internal.ncsa.edu
 172.24.16.9 lsst-esx08.internal.ncsa.edu
 172.24.16.10 lsst-esx09.internal.ncsa.edu

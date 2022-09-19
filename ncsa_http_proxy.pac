@@ -10,6 +10,7 @@ function FindProxyForURL(url, host) {
     //    ssh -D 8086 lsst-adm-ncsa.ncsa.illinois.edu ## LSST NCSA xCAT
     //    ssh -D 8087 acer.ncsa.illinois.edu ## VSPHERE ISCSI SUBNET ACCESS
     //    ssh -D 8088 hli-adm01.internal.ncsa.edu  ## HOLLI INTERNAL SUBNETS ACCESS
+    //    ssh -D 8089 mforgehn1  ## MFORGE GREEN & RED TUNNEL SUBNETS ACCESS
 
 
     // Cerberus
@@ -520,6 +521,28 @@ function FindProxyForURL(url, host) {
     {
         if ( isInNet(host, holli_bastion_subnets[i].start, holli_bastion_subnets[i].netmask) )
             return holli_bastion_proxy;
+    }
+
+
+    // mFORGE head node
+    var mforgehn_bastion_proxy = "SOCKS 127.0.0.1:8089";
+
+    var mforgehn_bastion_subnets = [
+        {
+            "name": "MFORGE GREEN TUNNEL SUBNET",
+            "start": "10.156.1.0",
+            "netmask": "255.255.255.0"
+        },
+        {   
+            "name": "MFORGE RED TUNNEL SUBNET",
+            "start": "10.156.0.0",
+            "netmask": "255.255.255.248"
+        },
+    ];
+    for (var i = 0; i < mforgehn_bastion_subnets.length; i++)
+    {
+        if ( isInNet(host, mforgehn_bastion_subnets[i].start, mforgehn_bastion_subnets[i].netmask) )
+            return mforgehn_bastion_proxy;
     }
 
 
