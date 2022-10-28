@@ -4,10 +4,10 @@ function FindProxyForURL(url, host) {
     //    ssh -D 8080 cerberus{1-4}.ncsa.illinois.edu
     //    ssh -D 8081 ache-bastion-{1-2}.ncsa.illinois.edu
     //    ssh -D 8082 bastion{1-2}.security.ncsa.illinois.edu
-    //    ssh -D 8083 lsst-login{1-3}.ncsa.illinois.edu
+    //    ssh -D 8083 mg-adm01.internal.ncsa.edu
     //    ssh -D 8084 140.252.32.143   ## LSST TUCSON BASTION
-    //    ssh -D 8085 lsst-adm01.ncsa.illinois.edu    ## LSST NPCF xCAT
-    //    ssh -D 8086 lsst-adm-ncsa.ncsa.illinois.edu ## LSST NCSA xCAT
+    //    ssh -D 8085 unused
+    //    ssh -D 8086 unused
     //    ssh -D 8087 acer.ncsa.illinois.edu ## VSPHERE ISCSI SUBNET ACCESS
     //    ssh -D 8088 hli-adm01.internal.ncsa.edu  ## HOLLI INTERNAL SUBNETS ACCESS
     //    ssh -D 8089 mforgehn1  ## MFORGE GREEN & RED TUNNEL SUBNETS ACCESS
@@ -402,9 +402,25 @@ function FindProxyForURL(url, host) {
     // NOTHING DEFINED YET FOR SECURITY PROXY
 
 
-    // LSST-LOGIN
-    // var  lsst_proxy = "SOCKS 127.0.0.1:8083";
-    // NOTHING DEFINED YET FOR LSST PROXY
+    // MAGNUS ADMIN BASTION
+    var magnus_proxy = "SOCKS 127.0.0.1:8083";
+    var magnus_subnets = [
+        {
+            "name": "MAGNUS BMC SUBNET",
+            "start": "172.29.14.1",
+            "netmask": "255.255.255.0"
+        },
+        {
+            "name": "MAGNUS MGMT SUBNET",
+            "start": "172.29.15.1",
+            "netmask": "255.255.255.0"
+        },
+    ];
+    for (var i = 0; i < magnus_subnets.length; i++)
+    {
+        if ( isInNet(host, magnus_subnets[i].start, magnus_subnets[i].netmask) )
+            return magnus_proxy;
+    }
 
 
     // LSST TUCSON BASTION
@@ -426,53 +442,6 @@ function FindProxyForURL(url, host) {
         if ( isInNet(host, lsst_tucson_bastion_subnets[i].start, lsst_tucson_bastion_subnets[i].netmask) )
             return lsst_tucson_bastion_proxy;
     }
-
-
-    // LSST-ADM01 NPCF
-    var lsst_adm01_bastion_proxy = "SOCKS 127.0.0.1:8085";
-    var lsst_adm01_bastion_subnets = [
-        {
-            "name": "lsst npcf xCAT-SVC ipmi",
-            "start": "192.168.180.1",
-            "netmask": "255.255.252.0"
-        },
-        {
-            "name": "lsst npcf xCAT-MGMT",
-            "start": "10.142.180.1",
-            "netmask": "255.255.252.0"
-        },
-    ];
-    for (var i = 0; i < lsst_adm01_bastion_subnets.length; i++)
-    {
-        if ( isInNet(host, lsst_adm01_bastion_subnets[i].start, lsst_adm01_bastion_subnets[i].netmask) )
-            return lsst_adm01_bastion_proxy;
-    }
-
-
-    // LSST-ADM-NCSA
-    var lsst_adm_ncsa_bastion_proxy = "SOCKS 127.0.0.1:8086";
-    var lsst_adm_ncsa_bastion_subnets = [
-        {
-            "name": "lsst ncsa xCAT-SVC ipmi TEMPORARY",
-            "start": "192.158.28.1",
-            "netmask": "255.255.254.0"
-        },   
-        {
-            "name": "lsst ncsa xCAT-SVC ipmi",
-            "start": "192.168.28.1",
-            "netmask": "255.255.254.0"
-        },      
-        {
-            "name": "lsst ncsa xCAT-SVC Test ipmi",
-            "start": "192.168.80.129",
-            "netmask": "255.255.255.128"
-        },     
-    ];  
-    for (var i = 0; i < lsst_adm_ncsa_bastion_subnets.length; i++)
-    {           
-        if ( isInNet(host, lsst_adm_ncsa_bastion_subnets[i].start, lsst_adm_ncsa_bastion_subnets[i].netmask) )
-            return lsst_adm_ncsa_bastion_proxy;
-    }   
 
 
     // Acer
