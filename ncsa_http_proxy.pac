@@ -70,6 +70,11 @@ function FindProxyForURL(url, host) {
             "start": "141.142.141.136",
             "netmask": "255.255.255.255"
         },
+       {
+            "name": "ncsa netbox",
+            "start": "141.142.141.200",
+            "netmask": "255.255.255.255"
+        },
         {
             "name": "ncsa netdot-proxy ipam",
             "start": "141.142.141.131",
