@@ -82,6 +82,7 @@
 172.28.18.9 asd-vault2.internal.ncsa.edu
 172.28.18.18 asd-prov01.internal.ncsa.edu
 172.28.18.22 hli-adm01.internal.ncsa.edu
+172.28.18.25 vcenter.internal.ncsa.edu
 172.28.18.101 asd-consul1.ncsa.illinois.edu
 172.28.18.102 asd-consul2.ncsa.illinois.edu
 172.28.18.103 asd-consul3.ncsa.illinois.edu
