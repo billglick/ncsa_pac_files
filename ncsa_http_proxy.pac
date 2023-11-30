@@ -21,6 +21,11 @@ function FindProxyForURL(url, host) {
 
     var cerberus_bastion_subnets = [
         {
+            "name": "CWM NPCF CampusCluster BMC Network",
+            "start": "172.28.64.1",
+            "netmask": "255.255.240.0"
+        },
+        {
             "name": "vsphere mgmt net esxi storage ipmi",
             "start": "10.142.192.1",
             "netmask": "255.255.255.0"
