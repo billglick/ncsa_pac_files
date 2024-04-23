@@ -20,6 +20,16 @@ function FindProxyForURL(url, host) {
         return cerberus_bastion_proxy;
 
     var cerberus_bastion_subnets = [
+        {   
+            "name": "CWM NCSA ICI Monitoring Mgmt Network",
+            "start": "172.29.19.0",
+            "netmask": "255.255.255.192"
+        },
+        {
+            "name": "CWM NPCF ICI Monitoring Mgmt Network",
+            "start": "172.29.19.64",
+            "netmask": "255.255.255.192"
+        },
         {
             "name": "CWM NPCF CampusCluster VMWare Mgmt Network",
             "start": "172.29.9.65",
