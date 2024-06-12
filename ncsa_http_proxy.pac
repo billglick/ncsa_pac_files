@@ -487,7 +487,7 @@ function FindProxyForURL(url, host) {
     var neteng_bastion_proxy = "SOCKS 127.0.0.1:8085";
     var neteng_bastion_subnets = [
         {
-                "name: "safteynet",
+                "name": "safteynet",
                 "start": "172.27.0.1",
                 "netmask": "255.255.248.0"
         }
