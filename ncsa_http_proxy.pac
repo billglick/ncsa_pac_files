@@ -490,7 +490,12 @@ function FindProxyForURL(url, host) {
                 "name": "safteynet",
                 "start": "172.27.0.1",
                 "netmask": "255.255.248.0"
-        }
+        },
+        {
+            "name": "neteng ansible",
+            "start": "141.142.141.137",
+            "netmask": "255.255.255.255"
+        },
     ];
         for (var i = 0; i < neteng_bastion_subnets.length; i++)
     {
