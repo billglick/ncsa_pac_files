@@ -104,8 +104,8 @@
 172.28.40.69 hli-sched-mgmt.holli.internal.ncsa.edu
 172.28.40.70 hli-lnet01-mgmt.holli.internal.ncsa.edu
 172.28.40.71 hli-lnet01-mgmt.holli.internal.ncsa.edu
-172.29.9.68 cc-hv01-vm.internal.ncsa.edu
-172.29.9.69 cc-hv02-vm.internal.ncsa.edu
+172.29.9.68 cc-hv01-vm.cc.internal.ncsa.edu
+172.29.9.69 cc-hv02-vm.cc.internal.ncsa.edu
 172.29.9.70 cc-hv03-vm.cc.internal.ncsa.edu
 172.29.9.71 cc-hv04-vm.cc.internal.ncsa.edu
 172.29.9.72 cc-hv05-vm.cc.internal.ncsa.edu
