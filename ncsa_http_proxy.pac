@@ -7,7 +7,7 @@ function FindProxyForURL(url, host) {
     //    ssh -D 8083 mg-adm01.internal.ncsa.edu
     //    ssh -D 8084 140.252.32.143   ## LSST TUCSON BASTION
     //    ssh -D 8085 [earl,randy].ncsa.illinois.edu ## Neteng bastion hosts to safetynet
-    //    ssh -D 8086 unused
+    //    ssh -D 8086 cc-adm01.cc.internal.ncsa.edu  ## ICCP INTERNAL SUBNETS ACCESS
     //    ssh -D 8087 acer.ncsa.illinois.edu ## VSPHERE ISCSI SUBNET ACCESS
     //    ssh -D 8088 hli-adm01.internal.ncsa.edu  ## HOLLI INTERNAL SUBNETS ACCESS
     //    ssh -D 8089 mforgehn1  ## MFORGE GREEN & RED TUNNEL SUBNETS ACCESS
@@ -503,7 +503,22 @@ function FindProxyForURL(url, host) {
             return neteng_bastion_proxy;
     }
 
-
+    // ICCP Bastion Hosts
+    var iccp_bastion_proxy = "SOCKS 127.0.0.1:8086";
+            
+    var iccp_bastion_subnets = [
+        {   
+            "name": "ICCP BMC",
+            "start": "172.28.64.1",
+            "netmask": "255.255.240.0"
+        },
+    ];      
+        for (var i = 0; i < iccp_bastion_subnets.length; i++)
+    {       
+        if ( isInNet(host, iccp_bastion_subnets[i].start, iccp_bastion_subnets[i].netmask) )
+            return iccp_bastion_proxy;
+    }       
+            
     // Acer
     var acer_bastion_proxy = "SOCKS 127.0.0.1:8087";
 
