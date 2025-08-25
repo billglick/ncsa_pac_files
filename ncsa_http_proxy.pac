@@ -310,6 +310,11 @@ function FindProxyForURL(url, host) {
             "start": "141.142.193.144",
             "netmask": "255.255.255.240"
         },
+        {   
+            "name": "ncsa ici-ansible",
+            "start": "141.142.192.20",
+            "netmask": "255.255.255.255"
+        },  
         {
             "name": "ncsa its-monitor",
             "start": "141.142.192.42",
