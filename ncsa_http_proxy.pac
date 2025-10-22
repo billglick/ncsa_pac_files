@@ -30,6 +30,11 @@ function FindProxyForURL(url, host) {
             "start": "172.29.19.64",
             "netmask": "255.255.255.192"
         },
+        {   
+            "name": "CWM NPCF CampusCluster BMC Network",
+            "start": "172.28.64.1",
+            "netmask": "255.255.240.0"
+        },
         {
             "name": "CWM NPCF CampusCluster VMWare Mgmt Network",
             "start": "172.29.9.65",
@@ -507,11 +512,6 @@ function FindProxyForURL(url, host) {
     var iccp_bastion_proxy = "SOCKS 127.0.0.1:8086";
             
     var iccp_bastion_subnets = [
-        {
-            "name": "CWM NPCF CampusCluster BMC Network",
-            "start": "172.28.64.1",
-            "netmask": "255.255.240.0"
-        },
     ];      
         for (var i = 0; i < iccp_bastion_subnets.length; i++)
     {       
