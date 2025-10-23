@@ -346,6 +346,16 @@ function FindProxyForURL(url, host) {
             "netmask": "255.255.255.255"
         },
         {
+            "name": "ncsa netbox",
+            "start": "141.142.141.147",
+            "netmask": "255.255.255.255"
+        },
+        {
+            "name": "ncsa netbox-dev",
+            "start": "141.142.141.152",
+            "netmask": "255.255.255.255"
+        },
+        {
             "name": "www.ncsa.illinois.edu TechServices cPanel",
             "start": "18.220.149.166",
             "netmask": "255.255.255.255"
