@@ -90,7 +90,7 @@ function FindProxyForURL(url, host) {
             "start": "141.142.141.136",
             "netmask": "255.255.255.255"
         },
-       {
+        {
             "name": "ncsa netbox",
             "start": "141.142.141.200",
             "netmask": "255.255.255.255"
@@ -312,7 +312,7 @@ function FindProxyForURL(url, host) {
         },
         {   
             "name": "ncsa ici-ansible",
-            "start": "141.142.192.20",
+            "start": "141.142.152.20",
             "netmask": "255.255.255.255"
         },  
         {
