@@ -20,6 +20,11 @@ function FindProxyForURL(url, host) {
         return cerberus_bastion_proxy;
 
     var cerberus_bastion_subnets = [
+        {
+            "name": "ISF Proxmox Mgmt Network",
+            "start": "172.28.8.64",
+            "netmask": "255.255.255.224"
+        },
         {   
             "name": "CWM NCSA ICI Monitoring Mgmt Network",
             "start": "172.29.19.0",
