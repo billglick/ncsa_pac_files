@@ -5,7 +5,7 @@ function FindProxyForURL(url, host) {
     //    ssh -D 8081 ache-bastion-{1-2}.ncsa.illinois.edu
     //    ssh -D 8082 bastion{1-2}.security.ncsa.illinois.edu
     //    ssh -D 8083 mg-adm01.internal.ncsa.edu
-    //    ssh -D 8084 140.252.32.143   ## LSST TUCSON BASTION
+    //    ssh -D 8084 ## UNUSED - WAS LSST TUCSON BASTION
     //    ssh -D 8085 [earl,randy].ncsa.illinois.edu ## Neteng bastion hosts to safetynet
     //    ssh -D 8086 cc-adm01.cc.internal.ncsa.edu  ## ICCP INTERNAL SUBNETS ACCESS
     //    ssh -D 8087 acer.ncsa.illinois.edu ## VSPHERE ISCSI SUBNET ACCESS
@@ -35,7 +35,27 @@ function FindProxyForURL(url, host) {
             "start": "172.29.19.64",
             "netmask": "255.255.255.192"
         },
-        {   
+        {
+            "name": "CWM NPCF ILLIAQ BMC Network",
+            "start": "172.28.94.1",
+            "netmask": "255.255.255.0"
+        },
+        {
+            "name": "CWM NPCF ILLIAQ Facility Network",
+            "start": "172.28.95.1",
+            "netmask": "255.255.255.192"
+        },
+        {
+            "name": "CWM NPCF ILLIAQ ADMIN Access Network",
+            "start": "172.28.95.65",
+            "netmask": "255.255.255.240"
+        },
+        {
+            "name": "CWM NPCF ILLIAQ VM Access Network",
+            "start": "172.28.95.81",
+            "netmask": "255.255.255.240"
+        },
+        {
             "name": "CWM NPCF CampusCluster BMC Network",
             "start": "172.28.64.1",
             "netmask": "255.255.240.0"
@@ -60,16 +80,6 @@ function FindProxyForURL(url, host) {
             "start": "10.142.208.1",
             "netmask": "255.255.255.0"
         },
-        {
-            "name": "lsst ncsa 3003 mgmt net esxi storage ipmi",
-            "start": "10.142.237.1",
-            "netmask": "255.255.255.0"
-        },
-        {
-            "name": "lsst npcf vsphere mgmt net",
-            "start": "172.24.16.1",
-            "netmask": "255.255.255.0"
-        },
         {       
             "name": "Admin Delta VM Network 550",
             "start": "172.28.16.65",
@@ -86,11 +96,6 @@ function FindProxyForURL(url, host) {
             "netmask": "255.255.254.0"
         },
         {
-            "name": "lsst laserena aa net",
-            "start": "139.229.126.1",
-            "netmask": "255.255.255.0"
-        },
-        {
             "name": "ncsa netdot",
             "start": "141.142.141.136",
             "netmask": "255.255.255.255"
@@ -104,16 +109,6 @@ function FindProxyForURL(url, host) {
             "name": "ncsa netdot-proxy ipam",
             "start": "141.142.141.131",
             "netmask": "255.255.255.255"
-        },
-        {
-            "name": "lsst-nts-k8s.ncsa.illinois.edu",
-            "start": "141.142.238.233",
-            "netmask": "255.255.255.255"
-        },
-        {
-            "name": "lsst in npcf",
-            "start": "141.142.180.1",
-            "netmask": "255.255.254.0"
         },
         {
             "name": "odcim.ncsa.illinois.edu",
@@ -482,26 +477,6 @@ function FindProxyForURL(url, host) {
             return magnus_proxy;
     }
 
-
-    // LSST TUCSON BASTION
-    var lsst_tucson_bastion_proxy = "SOCKS 127.0.0.1:8084";
-    var lsst_tucson_bastion_subnets = [
-        {
-            "name": "lsst tucson atarchiver idrac",
-            "start": "140.252.32.127",
-            "netmask": "255.255.255.255"
-        },
-        {
-            "name": "lsst tucson comcam idrac",
-            "start": "140.252.32.161",
-            "netmask": "255.255.255.248"
-        },
-    ];
-    for (var i = 0; i < lsst_tucson_bastion_subnets.length; i++)
-    {
-        if ( isInNet(host, lsst_tucson_bastion_subnets[i].start, lsst_tucson_bastion_subnets[i].netmask) )
-            return lsst_tucson_bastion_proxy;
-    }
 
     // Neteng Bastion hosts
     var neteng_bastion_proxy = "SOCKS 127.0.0.1:8085";
