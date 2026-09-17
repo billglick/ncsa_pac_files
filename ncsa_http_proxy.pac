@@ -14,7 +14,7 @@ function FindProxyForURL(url, host) {
 
 
     // Cerberus
-    var cerberus_bastion_proxy = "SOCKS5 127.0.0.1:8080";
+    var cerberus_bastion_proxy = "SOCKS5 127.0.0.1:8080; SOCKS 127.0.0.1:8080";
 
     if ( host == "vsphere.ncsa.illinois.edu" )
         return cerberus_bastion_proxy;
@@ -24,6 +24,11 @@ function FindProxyForURL(url, host) {
     if (shExpMatch(host, "nvp-proxmox*.internal.ncsa.edu")) {
         return cerberus_bastion_proxy;
     }
+
+    // New IPv6 Subnets Array
+    var cerberus_bastion_subnets_v6 = [
+        "2620:0:c80:1401::/64" // Covers 2620:0:c80:1401::19
+    ];
 
     var cerberus_bastion_subnets = [
         {
@@ -378,12 +383,26 @@ function FindProxyForURL(url, host) {
         },
     ];
 
+    // Check IPv4 subnets
     for (var i = 0; i < cerberus_bastion_subnets.length; i++)
     {
-    if ( isInNet(host, cerberus_bastion_subnets[i].start, cerberus_bastion_subnets[i].netmask) )
-        return cerberus_bastion_proxy;
+        if ( isInNet(host, cerberus_bastion_subnets[i].start, cerberus_bastion_subnets[i].netmask) )
+            return cerberus_bastion_proxy;
     }
 
+    // Check IPv6 subnets using IPv6 PAC extension
+    for (var j = 0; j < cerberus_bastion_subnets_v6.length; j++)
+    {
+        if (typeof isInNetEx === "function" && isInNetEx(host, cerberus_bastion_subnets_v6[j]))
+            return cerberus_bastion_proxy;
+    }
+
+    // OLD METHOD BEFORE INTRODUCING IPv6 SUPPORT
+    // for (var i = 0; i < cerberus_bastion_subnets.length; i++)
+    // {
+    // if ( isInNet(host, cerberus_bastion_subnets[i].start, cerberus_bastion_subnets[i].netmask) )
+    //     return cerberus_bastion_proxy;
+    // }
 
     // ACHE
     var ache_bastion_proxy = "SOCKS 127.0.0.1:8081";
