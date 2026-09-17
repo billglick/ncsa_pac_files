@@ -19,6 +19,12 @@ function FindProxyForURL(url, host) {
     if ( host == "vsphere.ncsa.illinois.edu" )
         return cerberus_bastion_proxy;
 
+    // Match any internal NVP proxmox host regardless of IP version
+    // nvp-proxmox supports IPv6 which breaks the subnet matching logic later
+    if (shExpMatch(host, "nvp-proxmox*.internal.ncsa.edu")) {
+        return cerberus_bastion_proxy;
+    }
+
     var cerberus_bastion_subnets = [
         {
             "name": "NVP Test MGMT Network",
