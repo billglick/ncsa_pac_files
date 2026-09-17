@@ -27,7 +27,7 @@ function FindProxyForURL(url, host) {
 
     // New IPv6 Subnets Array
     var cerberus_bastion_subnets_v6 = [
-        "2620:0:c80:1401::/64" // Covers 2620:0:c80:1401::19
+        "2620:0:c80:1401::/64"
     ];
 
     var cerberus_bastion_subnets = [
