@@ -21,6 +21,11 @@ function FindProxyForURL(url, host) {
 
     var cerberus_bastion_subnets = [
         {
+            "name": "NVP ICI-Virt-Cluster-Test-MGMT (1108) Network",
+            "start": "172.28.7.16",
+            "netmask": "255.255.255.240"
+        },
+        {
             "name": "ISF Proxmox Mgmt Network",
             "start": "172.28.8.64",
             "netmask": "255.255.255.224"

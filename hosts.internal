@@ -75,6 +75,13 @@
 172.28.2.206 mvdi02.internal.ncsa.edu
 172.28.2.207 mvdi03.internal.ncsa.edu
 172.28.2.208 mvdi04.internal.ncsa.edu
+172.28.7.18 nvp-proxmox-cluster.internal.ncsa.edu
+172.28.7.19 nvp-proxmox-01.internal.ncsa.edu
+172.28.7.20 nvp-proxmox-02.internal.ncsa.edu
+172.28.7.21 nvp-proxmox-03.internal.ncsa.edu
+172.28.7.22 nvp-proxmox-04.internal.ncsa.edu
+172.28.7.23 nvp-storage-01.internal.ncsa.edu
+172.28.7.24 nvp-backup-01.internal.ncsa.edu
 172.28.8.68 isf-npcf-pve01.internal.ncsa.edu
 172.28.8.69 isf-npcf-pve02.internal.ncsa.edu
 172.28.8.70 isf-npcf-pve00.internal.ncsa.edu
