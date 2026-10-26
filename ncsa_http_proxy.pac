@@ -31,6 +31,16 @@ function FindProxyForURL(url, host) {
     ];
 
     var cerberus_bastion_subnets = [
+        {   
+            "name": "git.ncsa.illinois.edu",
+            "start": "141.142.193.69",
+            "netmask": "255.255.255.255"
+        },  
+        {   
+            "name": "git-test.ncsa.illinois.edu",
+            "start": "141.142.193.165",
+            "netmask": "255.255.255.255"
+        },  
         {
             "name": "NVP Test MGMT Network",
             "start": "172.28.7.16",
